@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f5e6; /* soft light green */
+    color: #003300;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #99d6a2; /* pastel green */
+    color: #003300;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* Navigation (if any) */
+nav {
+    background-color: #c2e0c6;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003300;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #007f5f;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cce5cc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 5px rgba(102, 187, 106, 0.5);
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #57a05b;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #b2dfdb;
+    color: #003300;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fff9;
+}
+
+tr:hover {
+    background-color: #f1fff1;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td:before {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before { content: "Name"; }
+    td:nth-of-type(2):before { content: "Email"; }
+    td:nth-of-type(3):before { content: "Phone"; }
+    td:nth-of-type(4):before { content: "Date"; }
+}
